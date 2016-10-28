@@ -11,7 +11,7 @@ public class PlatformSpawnerSCR : MonoBehaviour {
 
     float timer;
 
-    List<GameObject> l_platforms = new List<GameObject>();    
+    public List<GameObject> l_platforms = new List<GameObject>();    
 
 	void Start ()
     {
@@ -33,10 +33,12 @@ public class PlatformSpawnerSCR : MonoBehaviour {
             button.GetComponentInChildren<Text>().text = spawnX.ToString();
             
             Vector3 newPos = new Vector3(transform.position.x + spawnX, transform.position.y, transform.position.z);
+            platformRef.name = "newPlat";
             platformRef.transform.position = newPos;
-
-           // platformRef.transform.position.Set(platformRef.transform.position.x + spawnX, this.transform.position.y, this.transform.position.z);
-           l_platforms.Add(GameObject.Instantiate(platformRef));
+            platformRef.name = platformRef.name + l_platforms.Count;
+            // platformRef.transform.position.Set(platformRef.transform.position.x + spawnX, this.transform.position.y, this.transform.position.z);
+            Instantiate(platformRef);
+           // l_platforms.Add(GameObject.Instantiate(platformRef));
         }
 	}
 }
