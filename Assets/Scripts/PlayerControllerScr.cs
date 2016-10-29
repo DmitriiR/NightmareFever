@@ -17,7 +17,7 @@ public class PlayerControllerScr : MonoBehaviour {
     public float speed = 6.0f;
     public float jumpSpeed = 8.0f;
     public float gravity = 20.0f;
-    public float rotateSpeedGrounded = 3.0f;    // Rotation speed at ground
+    public float rotateSpeedGrounded = 0.0f;    // Rotation speed at ground
 
     public float inAirSpeed = 2.0f;             // Adds or substracts to the movementspeed in air
     public float inAirDrift = 0.5f;             // Adds Sidewards drift in air
@@ -74,7 +74,7 @@ public class PlayerControllerScr : MonoBehaviour {
 
         isGrounded = Physics.Linecast(this.GetComponent<Transform>().transform.position, groundChecker.position);
         float rayDistance = controller.bounds.extents.y;
-        isGrounded = Physics.Raycast (transform.position, Vector3.down, rayDistance + 0.085f);
+        isGrounded = Physics.Raycast (transform.position, Vector3.down, rayDistance );
         //If our player hit the jump key, then it's true that we jumped!
         if (pressedJump)
         {
