@@ -42,11 +42,12 @@ public class PlayerControllerScr : MonoBehaviour {
 
     CharacterController controller;
 
-
+    ParticleSystem damageEffect;
     void Start ()
     {
        controller = this.GetComponent<CharacterController>();
-     
+        damageEffect = this.GetComponentInChildren<ParticleSystem>();
+        damageEffect.enableEmission = false;
     }
 
 
