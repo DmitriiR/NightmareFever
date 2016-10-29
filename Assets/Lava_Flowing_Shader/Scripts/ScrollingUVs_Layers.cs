@@ -3,12 +3,19 @@ using System.Collections;
 
 public class ScrollingUVs_Layers : MonoBehaviour 
 {
-	//public int materialIndex = 0;
-	public Vector2 uvAnimationRate = new Vector2( .50f, 0.0f );
+    //public int materialIndex = 0;
+    public Vector2 uvAnimationRate;// = new Vector2( .50f, 0.0f );
 	public string textureName = "_MainTex";
     
 	public Vector2 uvOffset = Vector2.zero;
-	
+
+    void Start()
+    {
+
+        uvAnimationRate.x = 0.0f;
+        uvAnimationRate.y = GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManager>().LavaFlowSpeed;
+    }
+
 	void LateUpdate() 
 	{
 		uvOffset += ( uvAnimationRate * Time.deltaTime );

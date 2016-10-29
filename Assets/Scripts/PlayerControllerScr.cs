@@ -5,14 +5,17 @@ public class PlayerControllerScr : MonoBehaviour {
 
     // Use this for initialization
 
-  ///  public float speed = 6.0F;
-  //  public float jumpSpeed = 16.0F;
-  // possible use public float jumpHeight; 
-  //  public float gravity = 20.0F;
-   // private Vector3 moveDirection = Vector3.zero;
+    ///  public float speed = 6.0F;
+    //  public float jumpSpeed = 16.0F;
+    // possible use public float jumpHeight; 
+    //  public float gravity = 20.0F;
+    // private Vector3 moveDirection = Vector3.zero;
 
 
     // new code and variable declarations
+    public bool playerAlive = true;
+    public float playerLife;
+    public float playerMaxLife;
 
     public float speed = 6.0f;
     public float jumpSpeed = 8.0f;

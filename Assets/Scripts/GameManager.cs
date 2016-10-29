@@ -6,7 +6,10 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour {
 
-	// Use this for initialization
+    // Use this for initialization
+    public float LavaFlowSpeed;
+    public float PlatformSpeed;
+    public float LavaDamage;
 	void Start ()
     {
 	
