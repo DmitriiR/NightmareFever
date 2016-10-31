@@ -57,32 +57,5 @@ public class TeethController : MonoBehaviour {
         }
     }
 
-    // Update is called once per frame
-    void Update ()
-    {
-
-      //  float t = Mathf.PingPong( 10.0f , 5.0f);
-        //  topJawRef.transform.position = Vector3.Lerp(from, to, t);
-        
-          //  t = Mathf.PingPong(Time.time * speed * 2.0f, 1.0f);
-          //  bottomJawRef.transform.eulerAngles = Vector3.Lerp(from, to, t);
-
-        //  Vector3 newPos = new Vector3(topJawRef.transform.position.x, topJawRef.transform.position.y + t, transform.position.z);
-       // topJawRef.transform.position = newPos;
-
-
-
-
-       
-
-     //   float    min = topJawRef.transform.position.x;
-     //   float    max = topJawRef.transform.position.x + 3;
-
-
-
-      //  topJawRef.transform.position = new Vector3(topJawRef.transform.position.x, topJawRef.transform.position.y + Mathf.PingPong(Time.time * 2, max - min) + min, topJawRef.transform.position.z);
-
-       
-
-    }
+   
 }

@@ -15,10 +15,19 @@ public class PlatformScr : MonoBehaviour {
 	// Update is called once per frame
 	void Update ()
     {
-      
       Vector3 newPos = new Vector3(transform.position.x , transform.position.y , transform.position.z + backSpeed);
       transform.position = newPos;
+    }
 
+    void OnTriggerEnter(Collider col)
+    {
+        if (col.gameObject.tag == "player")
+        {
+            GameObject tempPlayer = col.gameObject;
+
+            this.GetComponent<Renderer>().material.color = Color.yellow;
+
+        }
 
     }
 }
