@@ -43,11 +43,16 @@ public class PlayerControllerScr : MonoBehaviour {
     CharacterController controller;
 
     ParticleSystem damageEffect;
+
+    private Animator anim;
+
+
     void Start ()
     {
        controller = this.GetComponent<CharacterController>();
         damageEffect = this.GetComponentInChildren<ParticleSystem>();
         damageEffect.enableEmission = false;
+        anim = GetComponent<Animator>();
     }
 
 
@@ -56,21 +61,53 @@ public class PlayerControllerScr : MonoBehaviour {
     {
         pressedJump = Input.GetButton("Jump");
         unpressedJump = Input.GetButtonUp("Jump");
+        if (Input.GetKey(KeyCode.UpArrow) || Input.GetKey(KeyCode.W))
+        {
+            anim.SetBool("Run", true);
+        }
+        else
+        {
+            anim.SetBool("Run", false);
+        }
 
-        // Jump
-    /*
-        CharacterController controller = GetComponent<CharacterController>();
-            if (controller.isGrounded)
-            {
-                moveDirection = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
-                moveDirection = transform.TransformDirection(moveDirection);
-                moveDirection *= speed;
-                if (Input.GetButton("Jump"))
-                    moveDirection.y = jumpSpeed;
-            }
-            moveDirection.y -= gravity * Time.deltaTime;
-            controller.Move(moveDirection * Time.deltaTime);
-   */
+        if (Input.GetKey(KeyCode.LeftArrow))
+        {
+            anim.SetBool("RunLeft", true);
+        }
+        else
+        {
+            anim.SetBool("RunLeft", false);
+        }
+
+        if (Input.GetKey(KeyCode.RightArrow))
+        {
+            anim.SetBool("RunRight", true);
+        }
+        else
+        {
+            anim.SetBool("RunRight", false);
+        }
+
+        if (Input.GetKey(KeyCode.DownArrow))
+        {
+            anim.SetBool("RunBack", true);
+        }
+        else
+        {
+            anim.SetBool("RunBack", false);
+        }
+
+        if (Input.GetKey(KeyCode.Space))
+        {
+            anim.SetBool("Attack", true);
+        }
+        else
+        {
+            anim.SetBool("Attack", false);
+        }
+
+        controller.Move(moveDirection * Time.deltaTime);
+   
     }
 
     void FixedUpdate()

@@ -595,7 +595,7 @@ ModelImporter:
       name: idle_normal
       takeName: Take 001
       firstFrame: 2
-      lastFrame: 830
+      lastFrame: 47
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -12530,7 +12530,7 @@ ModelImporter:
     generateSecondaryUV: 1
     useFileUnits: 1
     optimizeMeshForGPU: 1
-    keepQuads: 1
+    keepQuads: 0
     weldVertices: 1
     secondaryUVAngleDistortion: 8
     secondaryUVAreaDistortion: 15.000001
