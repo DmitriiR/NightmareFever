@@ -44,15 +44,16 @@ public class PlayerControllerScr : MonoBehaviour {
 
     ParticleSystem damageEffect;
 
-    private Animator anim;
-
+    public Animator anim;
+    private Animation animationRef;
 
     void Start ()
     {
        controller = this.GetComponent<CharacterController>();
         damageEffect = this.GetComponentInChildren<ParticleSystem>();
         damageEffect.enableEmission = false;
-        anim = GetComponent<Animator>();
+       // anim = GetComponent<Animator>();
+        animationRef = GetComponent<Animation>();
     }
 
 
@@ -100,6 +101,7 @@ public class PlayerControllerScr : MonoBehaviour {
         if (Input.GetKey(KeyCode.Space))
         {
             anim.SetBool("Attack", true);
+           // animationRef.GetClip("jump").;
         }
         else
         {
