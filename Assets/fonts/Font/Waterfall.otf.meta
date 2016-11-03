@@ -1,0 +1,21 @@
+fileFormatVersion: 2
+guid: e03da7c8700c9ba4f88f2289ddd90ba7
+timeCreated: 1478126712
+licenseType: Free
+TrueTypeFontImporter:
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - WATERFALL
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 7adcd72182141c74db12e166d92348b6, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
