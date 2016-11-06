@@ -45,7 +45,7 @@ public class ScrollingUVs_Layers : MonoBehaviour
 	}
     
     
-    // COLLISION!!!
+    // COLLISION!!! with particles
     void OnTriggerEnter(Collider col)
     {
        

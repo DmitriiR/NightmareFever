@@ -47,6 +47,8 @@ public class PlayerControllerScr : MonoBehaviour {
     public Animator anim;
     private Animation animationRef;
 
+  
+
     void Start ()
     {
        controller = this.GetComponent<CharacterController>();
@@ -54,14 +56,17 @@ public class PlayerControllerScr : MonoBehaviour {
         damageEffect.enableEmission = false;
        // anim = GetComponent<Animator>();
         animationRef = GetComponent<Animation>();
+
+      
+
     }
 
 
-    
-    void Update()
+    void ProcessAnimations()
     {
         pressedJump = Input.GetButton("Jump");
         unpressedJump = Input.GetButtonUp("Jump");
+
         if (Input.GetKey(KeyCode.UpArrow) || Input.GetKey(KeyCode.W))
         {
             anim.SetBool("Run", true);
@@ -101,15 +106,22 @@ public class PlayerControllerScr : MonoBehaviour {
         if (Input.GetKey(KeyCode.Space))
         {
             anim.SetBool("Attack", true);
-           // animationRef.GetClip("jump").;
+            // animationRef.GetClip("jump").;
         }
         else
         {
             anim.SetBool("Attack", false);
         }
 
-        controller.Move(moveDirection * Time.deltaTime);
-   
+    }
+    
+    void Update()
+    {
+        ProcessAnimations();
+
+     //   controller.Move(moveDirection * Time.deltaTime);
+       
+
     }
 
     void FixedUpdate()
