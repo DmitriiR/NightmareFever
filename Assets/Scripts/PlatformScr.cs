@@ -6,7 +6,7 @@ public class PlatformScr : MonoBehaviour {
 
 
     bool touching = false;
-    float backSpeed = 5.0f;
+    public float backSpeed = 15.0f;
  
     // Use this for initialization
     void Start ()
@@ -28,11 +28,13 @@ public class PlatformScr : MonoBehaviour {
 
     void OnTriggerEnter(Collider col)
     {
+
         if (col.gameObject.tag == "player")
         {
-
             GameObject tempPlayer = col.gameObject;
-            float pushUpDistance = this.transform.localScale.y ;
+            //float pushUpDistance = this.transform.localScale.y ;
+   
+            float pushUpDistance = 0.0f;
             Vector3 newPos = new Vector3(tempPlayer.transform.position.x, tempPlayer.transform.position.y + pushUpDistance, tempPlayer.transform.position.z);
             float time = 1.0f;
             var i = 0.0f;
