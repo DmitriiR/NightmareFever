@@ -10,7 +10,7 @@ public class PlayerControllerScr : MonoBehaviour {
     // possible use public float jumpHeight; 
     //  public float gravity = 20.0F;
     // private Vector3 moveDirection = Vector3.zero;
-
+    public bool DEBUG = false;
 
     // new code and variable declarations
     public bool playerAlive = true;
@@ -47,7 +47,6 @@ public class PlayerControllerScr : MonoBehaviour {
     public Animator anim;
     private Animation animationRef;
 
-  
 
     void Start ()
     {
@@ -56,8 +55,8 @@ public class PlayerControllerScr : MonoBehaviour {
         damageEffect.enableEmission = false;
        // anim = GetComponent<Animator>();
         animationRef = GetComponent<Animation>();
+     
 
-      
 
     }
 
@@ -126,6 +125,7 @@ public class PlayerControllerScr : MonoBehaviour {
 
     void FixedUpdate()
     {
+       
 
         isGrounded = Physics.Linecast(this.GetComponent<Transform>().transform.position, groundChecker.position);
         float rayDistance = controller.bounds.extents.y;
@@ -179,6 +179,7 @@ public class PlayerControllerScr : MonoBehaviour {
         //Rotate
         Vector3 curDir = new Vector3(moveDirection.x, 0, moveDirection.z);
         Vector3 newDir = Vector3.RotateTowards(transform.forward, curDir, (isGrounded ? rotateSpeedGrounded : inAirRotation) * Time.deltaTime, 0.0F);
+        if(DEBUG)
         Debug.DrawRay(transform.position, newDir * 10, Color.red);
         transform.rotation = Quaternion.LookRotation(newDir);
 
