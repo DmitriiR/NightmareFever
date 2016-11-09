@@ -45,7 +45,7 @@ public class ScrollingUVs_Layers : MonoBehaviour
 	}
     
     
-    // COLLISION!!!
+    // COLLISION!!! with particles
     void OnTriggerEnter(Collider col)
     {
        
@@ -57,6 +57,7 @@ public class ScrollingUVs_Layers : MonoBehaviour
             fryPlayer = true;
             col.gameObject.GetComponent<PlayerControllerScr>().playerLife -= GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManager>().LavaDamage;
             col.gameObject.GetComponentInChildren<ParticleSystem>().enableEmission = true;
+
         }
     }
 
