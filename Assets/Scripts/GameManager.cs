@@ -13,7 +13,7 @@ public class GameManager : MonoBehaviour {
     GameObject timerTextRef;
     
 
-    public float LavaFlowSpeed;
+  //  public float LavaFlowSpeed;
     public float PlatformSpeed;
     public float LavaDamage;
 	void Start ()

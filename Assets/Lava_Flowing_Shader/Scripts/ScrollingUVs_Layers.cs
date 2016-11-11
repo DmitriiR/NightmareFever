@@ -12,12 +12,14 @@ public class ScrollingUVs_Layers : MonoBehaviour
     private GameManager gameManager;
     bool fryPlayer;
 
+    public float lavaflowSpeed;
+
     void Start()
     {
 
         uvAnimationRate.x = 0.0f;
         gameManager = GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManager>();
-        uvAnimationRate.y = gameManager.GetComponent<GameManager>().LavaFlowSpeed;
+        uvAnimationRate.y = lavaflowSpeed;
         fryPlayer = false;
         playerRef = GameObject.FindGameObjectWithTag("player");
     }
