@@ -39,11 +39,11 @@ public class MonsterJesterScr : MonoBehaviour {
             if (player)
         {
             Vector3 relativePos = player.transform.position - eyeL.transform.position;
-            Quaternion rotation = Quaternion.LookRotation(relativePos);
+            Quaternion rotation = Quaternion.LookRotation(-relativePos);
             eyeL.transform.rotation = rotation;
 
             relativePos = player.transform.position - eyeR.transform.position;
-            rotation = Quaternion.LookRotation(relativePos);
+            rotation = Quaternion.LookRotation(-relativePos);
             eyeR.transform.rotation = rotation;
         }
 
