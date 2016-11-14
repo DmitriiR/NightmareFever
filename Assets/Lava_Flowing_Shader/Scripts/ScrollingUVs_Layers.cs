@@ -26,14 +26,11 @@ public class ScrollingUVs_Layers : MonoBehaviour
 
     void Update()
     {
+        // damage player with lava every frame
         if (fryPlayer)
         {
             playerRef.GetComponent<PlayerControllerScr>().playerLife -= gameManager.GetComponent<GameManager>().LavaDamage;
-
-
         }
-
-
     }
 	void LateUpdate() 
 	{
@@ -61,6 +58,9 @@ public class ScrollingUVs_Layers : MonoBehaviour
             col.gameObject.GetComponentInChildren<ParticleSystem>().enableEmission = true;
 
         }
+
+       
+
     }
 
     void OnTriggerExit(Collider col)

@@ -6,7 +6,12 @@ public class PlatformScr : MonoBehaviour {
 
 
     bool touching = false;
+
     float backSpeed;
+    GameObject playerRef;
+
+    float entryOffestZ;
+    
 
     Light light;
     // Use this for initialization
@@ -23,6 +28,17 @@ public class PlatformScr : MonoBehaviour {
       // mvoe the platform
       Vector3 newPos = new Vector3(transform.position.x , transform.position.y , transform.position.z + backSpeed);
       transform.position = newPos;
+       
+        //if the player is on the platform
+        if (touching)
+        {
+            GameObject tempPlayer = GameObject.FindGameObjectWithTag("player");
+            float zOffset = tempPlayer.transform.position.z - transform.position.z;
+            newPos = new Vector3(tempPlayer.transform.position.x, tempPlayer.transform.position.y, transform.position.z + entryOffestZ);
+
+            tempPlayer.transform.position = newPos;
+        }
+
     }
 
     void OnTriggerEnter(Collider col)
@@ -30,14 +46,17 @@ public class PlatformScr : MonoBehaviour {
 
         if (col.gameObject.tag == "player")
         {
+          
             GameObject tempPlayer = col.gameObject;
+            float zOffset =   tempPlayer.transform.position.z - transform.position.z ;
+            Vector3 newPos = new Vector3(tempPlayer.transform.position.x, tempPlayer.transform.position.y , tempPlayer.transform.position.z + zOffset);
+            tempPlayer.transform.position = newPos;
+            // global var to signify per frame move
+            touching = true;
 
+            entryOffestZ = zOffset;
 
-            //tempPlayer.GetComponent<Rigidbody>().AddForce(new Vector3(0.0f, 0.0f, 1000.0f));
-
-
-
-            // make light turn on
+            // make light on platform turn on
             light.enabled = true;
 
 
@@ -60,6 +79,11 @@ public class PlatformScr : MonoBehaviour {
     this.GetComponent<Renderer>().material.color = Color.yellow;
         
     }
+    }
+
+    void OnTriggerExit()
+    {
+        touching = false;
     }
 
     void OnCollisionEnter(Collision col)
