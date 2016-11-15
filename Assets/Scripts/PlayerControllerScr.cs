@@ -33,7 +33,7 @@ public class PlayerControllerScr : MonoBehaviour {
     private bool playerJumped = false;           //Tell us if the player has jumped
     private bool playerJumping = false;          //Tell us if the player is holding down the jump button
 
-    private Vector3 moveDirection = Vector3.zero;
+    public Vector3 moveDirection = Vector3.zero;
     private float inputModifyFactor = 1.0f;
     private bool isGrounded = false;
     public Transform groundChecker;

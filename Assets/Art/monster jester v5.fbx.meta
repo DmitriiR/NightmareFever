@@ -1,0 +1,149 @@
+fileFormatVersion: 2
+guid: 8a703712c33a2464daa7fab188c63c5e
+timeCreated: 1479160683
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: mouth_eyes_and_inner_mouth:group1
+    100004: mouth_eyes_and_inner_mouth:Gums_Lower
+    100006: mouth_eyes_and_inner_mouth:Gums_Upper
+    100008: mouth_eyes_and_inner_mouth:Head_Neutral
+    100010: mouth_eyes_and_inner_mouth:Head_Neutral1
+    100012: mouth_eyes_and_inner_mouth:Head_Neutral3
+    100014: mouth_eyes_and_inner_mouth:Head_Neutral5
+    100016: mouth_eyes_and_inner_mouth:Head_Neutral6
+    100018: mouth_eyes_and_inner_mouth:R_Eye1
+    100020: mouth_eyes_and_inner_mouth:Teeth_Lower
+    100022: mouth_eyes_and_inner_mouth:Teeth_Upper
+    100024: mouth_eyes_and_inner_mouth:transform1
+    100026: mouth_eyes_and_inner_mouth:transform2
+    100028: mouth_eyes_and_inner_mouth:transform3
+    100030: mouth_eyes_and_inner_mouth:transform4
+    100032: polySurface2
+    100034: polySurface3
+    100036: polySurface4
+    100038: polySurface4 1
+    100040: polySurface5
+    100042: pSphere3
+    100044: R_Eye1
+    100046: transform2
+    100048: transform3
+    100050: transform4
+    100052: transform5
+    100054: transform6
+    400000: //RootNode
+    400002: mouth_eyes_and_inner_mouth:group1
+    400004: mouth_eyes_and_inner_mouth:Gums_Lower
+    400006: mouth_eyes_and_inner_mouth:Gums_Upper
+    400008: mouth_eyes_and_inner_mouth:Head_Neutral
+    400010: mouth_eyes_and_inner_mouth:Head_Neutral1
+    400012: mouth_eyes_and_inner_mouth:Head_Neutral3
+    400014: mouth_eyes_and_inner_mouth:Head_Neutral5
+    400016: mouth_eyes_and_inner_mouth:Head_Neutral6
+    400018: mouth_eyes_and_inner_mouth:R_Eye1
+    400020: mouth_eyes_and_inner_mouth:Teeth_Lower
+    400022: mouth_eyes_and_inner_mouth:Teeth_Upper
+    400024: mouth_eyes_and_inner_mouth:transform1
+    400026: mouth_eyes_and_inner_mouth:transform2
+    400028: mouth_eyes_and_inner_mouth:transform3
+    400030: mouth_eyes_and_inner_mouth:transform4
+    400032: polySurface2
+    400034: polySurface3
+    400036: polySurface4
+    400038: polySurface4 1
+    400040: polySurface5
+    400042: pSphere3
+    400044: R_Eye1
+    400046: transform2
+    400048: transform3
+    400050: transform4
+    400052: transform5
+    400054: transform6
+    2300000: mouth_eyes_and_inner_mouth:Gums_Lower
+    2300002: mouth_eyes_and_inner_mouth:Gums_Upper
+    2300004: mouth_eyes_and_inner_mouth:Head_Neutral6
+    2300006: mouth_eyes_and_inner_mouth:Teeth_Lower
+    2300008: mouth_eyes_and_inner_mouth:Teeth_Upper
+    2300010: polySurface4
+    2300012: polySurface5
+    3300000: mouth_eyes_and_inner_mouth:Gums_Lower
+    3300002: mouth_eyes_and_inner_mouth:Gums_Upper
+    3300004: mouth_eyes_and_inner_mouth:Head_Neutral6
+    3300006: mouth_eyes_and_inner_mouth:Teeth_Lower
+    3300008: mouth_eyes_and_inner_mouth:Teeth_Upper
+    3300010: polySurface4
+    3300012: polySurface5
+    4300000: mouth_eyes_and_inner_mouth:Teeth_Lower
+    4300002: mouth_eyes_and_inner_mouth:Teeth_Upper
+    4300004: mouth_eyes_and_inner_mouth:Gums_Lower
+    4300006: mouth_eyes_and_inner_mouth:Gums_Upper
+    4300008: mouth_eyes_and_inner_mouth:Head_Neutral6
+    4300010: polySurface4
+    4300012: polySurface5
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

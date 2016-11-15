@@ -30,9 +30,11 @@ public class PlatformScr : MonoBehaviour {
       transform.position = newPos;
        
         //if the player is on the platform
+        GameObject tempPlayer = GameObject.FindGameObjectWithTag("player");
         if (touching)
+
+        //if (touching && tempPlayer.GetComponent<PlayerControllerScr>().moveDirection == Vector3.zero)
         {
-            GameObject tempPlayer = GameObject.FindGameObjectWithTag("player");
             if (!tempPlayer) Debug.LogError("Platform Could not find player tag");
             float zOffset = tempPlayer.transform.position.z - transform.position.z;
             newPos = new Vector3(tempPlayer.transform.position.x, tempPlayer.transform.position.y, transform.position.z + entryOffestZ);
@@ -47,7 +49,9 @@ public class PlatformScr : MonoBehaviour {
         if (col.gameObject.tag == "player")
         {
           
+            // moving player with the platform.
             GameObject tempPlayer = col.gameObject;
+
             float zOffset =   tempPlayer.transform.position.z - transform.position.z ;
             Vector3 newPos = new Vector3(tempPlayer.transform.position.x, tempPlayer.transform.position.y , tempPlayer.transform.position.z + zOffset);
             tempPlayer.transform.position = newPos;
